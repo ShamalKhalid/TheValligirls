@@ -5124,3 +5124,80 @@ img {
 .quotes{
 	font-size: 5em;
 }
+
+/* Clearfix Helper */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Specials Alignment Refinements */
+.image.left {
+    margin: 0 2rem 1rem 0 !important;
+    top: 0 !important;
+}
+
+.image.right {
+    margin: 0 0 1rem 2rem !important;
+    top: 0 !important;
+}
+
+@media screen and (max-width: 736px) {
+    .image.left, .image.right {
+        max-width: 100% !important;
+        float: none !important;
+        margin: 0 0 2rem 0 !important;
+    }
+    
+    .image.left img, .image.right img {
+        padding-right: 0 !important;
+    }
+}
+
+.clearfix ul {
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+/* Index Posts Alignment Refinements */
+#main > .posts > article {
+    display: flex;
+    flex-direction: column;
+}
+
+#main > .posts > article > header {
+    min-height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#main > .posts > article > .image {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+#main > .posts > article > p {
+    flex-grow: 1;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main > .posts > article > .actions {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 736px) {
+    #main > .posts > article > header {
+        min-height: auto;
+        margin-bottom: 1.5rem;
+    }
+}
+
